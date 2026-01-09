@@ -1,0 +1,74 @@
+# -----------------------------
+# Virtual environment
+# -----------------------------
+env/
+venv/
+.venv/
+
+# -----------------------------
+# macOS system files
+# -----------------------------
+.DS_Store
+
+# -----------------------------
+# Logs & temporary files
+# -----------------------------
+*.log
+*.tmp
+*.bak
+*.swp
+
+# -----------------------------
+# Python cache
+# -----------------------------
+__pycache__/
+*.py[cod]
+*$py.class
+
+# -----------------------------
+# IDEs / editors
+# -----------------------------
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# -----------------------------
+# Database
+# -----------------------------
+db.sqlite3
+*.sqlite3
+
+# -----------------------------
+# Django migrations (optional)
+# Only ignore pyc / cache inside migrations, not the migrations themselves
+# -----------------------------
+*/migrations/__pycache__/
+*/migrations/*.py[cod]
+*/migrations/*.py~
+
+# -----------------------------
+# Local data / media
+# -----------------------------
+media/
+data/
+
+# -----------------------------
+# Coverage / test reports
+# -----------------------------
+htmlcov/
+.coverage
+coverage.xml
+*.cover
+nosetests.xml
+pytest_cache/
+
+# -----------------------------
+# Environment variables / secrets
+# -----------------------------
+.env
+
+# -----------------------------
+# Scripts utilitaires (commit, ...)
+# -----------------------------
+_dev_utils/
