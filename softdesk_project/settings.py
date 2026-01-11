@@ -35,15 +35,22 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    # Default Django apps
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    # Project apps
+    'apps.users',
+    'apps.projects',
+
+
+    # Third-party libraries
     'rest_framework',
     'rest_framework_simplejwt',
-    'softdesk',
 ]
 
 MIDDLEWARE = [
