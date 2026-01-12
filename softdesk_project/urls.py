@@ -1,7 +1,8 @@
 # softdesk_project/urls.py
+from django.contrib import admin
 from django.urls import path, include
 
 urlpatterns = [
-    # Inclut toutes les URLs de l'app users
-    path("api/", include("apps.users.urls")),
+    path('admin/', admin.site.urls),
+    path('api/', include('apps.users.urls')),
 ]

@@ -3,7 +3,6 @@ from rest_framework import generics, permissions
 from rest_framework_simplejwt.authentication import JWTAuthentication
 from rest_framework.response import Response
 from rest_framework_simplejwt.views import TokenObtainPairView
-from rest_framework_simplejwt.tokens import RefreshToken
 
 from .serializers import UserSerializer
 
@@ -21,14 +20,9 @@ class SignupView(generics.CreateAPIView):
     def create(self, request, *args, **kwargs):
         serializer = self.get_serializer(data=request.data)
         serializer.is_valid(raise_exception=True)
-        user = serializer.save()
-
-        # Optional: return JWT immediately after signup
-        refresh = RefreshToken.for_user(user)
+        serializer.save()
         return Response({
-            "user": serializer.data,
-            "access": str(refresh.access_token),
-            "refresh": str(refresh),
+            "user": serializer.data
         })
 
 
