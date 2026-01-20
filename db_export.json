@@ -1,0 +1,224 @@
+[
+{
+  "model": "users.user",
+  "pk": 4,
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$hkOf4nDcO0e75Zl1foCmtY$yNVRXejtyo6XdReyd62idR+zg/FWzJVyjrqhDzrm5+A=",
+    "last_login": "2026-01-20T14:49:23.716Z",
+    "is_superuser": true,
+    "username": "super",
+    "first_name": "",
+    "last_name": "",
+    "email": "super@example.com",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2026-01-11T22:11:52.646Z",
+    "age": 30,
+    "can_be_contacted": false,
+    "can_data_be_shared": false,
+    "created_time": "2026-01-11T22:11:52.875Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "users.user",
+  "pk": 6,
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$LjivdM9vZCRmmjRqKpi2M8$x612lV780ZEAdlBI444+spNvnS7L2oCViMmSYAD6XRM=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "Alice",
+    "first_name": "Alice",
+    "last_name": "Martin",
+    "email": "alice@example.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-01-14T19:25:51.060Z",
+    "age": 30,
+    "can_be_contacted": true,
+    "can_data_be_shared": true,
+    "created_time": "2026-01-14T19:25:51.267Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "users.user",
+  "pk": 7,
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$q606NdMSNZkWNkIxxq1OcI$wwbeGcLDceajE5TrMU7XhLyxJgY56rxrpjKJ9IFix6Y=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "Bob",
+    "first_name": "Bob",
+    "last_name": "Durand",
+    "email": "bob@example.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-01-14T19:26:15.590Z",
+    "age": 35,
+    "can_be_contacted": true,
+    "can_data_be_shared": false,
+    "created_time": "2026-01-14T19:26:15.819Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "users.user",
+  "pk": 8,
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$8KvzWH9MexcREwbGzgam1H$5LnPKaSbjf5nOnGzFv9R/Tls1SYOMdILaCyZZ+wGUyw=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "Charlie",
+    "first_name": "Charlie",
+    "last_name": "Dupont",
+    "email": "charlie@example.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-01-14T19:26:30.113Z",
+    "age": 28,
+    "can_be_contacted": false,
+    "can_data_be_shared": true,
+    "created_time": "2026-01-14T19:26:30.334Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "projects.project",
+  "pk": 1,
+  "fields": {
+    "title": "Projet A",
+    "description": "Premier projet",
+    "type": "backend",
+    "created_time": "2026-01-19T15:48:43.357Z",
+    "author": 8
+  }
+},
+{
+  "model": "projects.project",
+  "pk": 2,
+  "fields": {
+    "title": "Projet B",
+    "description": "Second projet",
+    "type": "backend",
+    "created_time": "2026-01-19T16:02:28.273Z",
+    "author": 8
+  }
+},
+{
+  "model": "projects.project",
+  "pk": 3,
+  "fields": {
+    "title": "Projet C",
+    "description": "Troisième projet",
+    "type": "frontend",
+    "created_time": "2026-01-20T14:56:14.891Z",
+    "author": 8
+  }
+},
+{
+  "model": "projects.project",
+  "pk": 4,
+  "fields": {
+    "title": "Projet D",
+    "description": "Projet 4",
+    "type": "frontend",
+    "created_time": "2026-01-20T15:00:02.890Z",
+    "author": 8
+  }
+},
+{
+  "model": "projects.project",
+  "pk": 5,
+  "fields": {
+    "title": "Projet E",
+    "description": "Projet 5 Modifié",
+    "type": "frontend",
+    "created_time": "2026-01-20T15:00:36.854Z",
+    "author": 6
+  }
+},
+{
+  "model": "projects.contributor",
+  "pk": 1,
+  "fields": {
+    "user": 8,
+    "project": 1,
+    "role": "AUTHOR"
+  }
+},
+{
+  "model": "projects.contributor",
+  "pk": 2,
+  "fields": {
+    "user": 8,
+    "project": 2,
+    "role": "AUTHOR"
+  }
+},
+{
+  "model": "projects.contributor",
+  "pk": 3,
+  "fields": {
+    "user": 8,
+    "project": 3,
+    "role": "AUTHOR"
+  }
+},
+{
+  "model": "projects.contributor",
+  "pk": 4,
+  "fields": {
+    "user": 8,
+    "project": 4,
+    "role": "AUTHOR"
+  }
+},
+{
+  "model": "projects.contributor",
+  "pk": 5,
+  "fields": {
+    "user": 6,
+    "project": 5,
+    "role": "AUTHOR"
+  }
+},
+{
+  "model": "projects.contributor",
+  "pk": 6,
+  "fields": {
+    "user": 7,
+    "project": 5,
+    "role": "CONTRIBUTOR"
+  }
+},
+{
+  "model": "projects.issue",
+  "pk": 1,
+  "fields": {
+    "title": "Bug critique sur le login",
+    "description": "L'utilisateur ne peut pas se connecter avec un compte valide.",
+    "priority": "HIGH",
+    "tag": "BUG",
+    "status": "To Do",
+    "project": 5,
+    "author": 6,
+    "assigned_user": 7,
+    "created_time": "2026-01-20T22:32:32.868Z"
+  }
+},
+{
+  "model": "projects.comment",
+  "pk": "8401eee0-239d-42f6-83c4-979ecb7eef2a",
+  "fields": {
+    "description": "J'ai vérifié les logs, il semble que ce soit un problème de timeout avec la base de données.",
+    "author": 6,
+    "issue": 1,
+    "created_time": "2026-01-20T22:37:10.610Z"
+  }
+}
+]
