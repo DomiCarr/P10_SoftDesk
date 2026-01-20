@@ -39,7 +39,7 @@ class ContributorSerializer(serializers.ModelSerializer):
     """
     class Meta:
         model = Contributor
-        fields = ["id", "user", "project", "role"]
+        fields = ["id", "user", "role"]
 
     def validate(self, data):
         project = data["project"]
