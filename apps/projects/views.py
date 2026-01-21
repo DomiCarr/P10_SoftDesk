@@ -12,7 +12,7 @@ from .serializers import (
     IssueSerializer,
     CommentSerializer
 )
-from .permissions import IsProjectContributor, IsProjectAuthor
+from .permissions import IsProjectContributor, IsProjectAuthor, IsResourceAuthor
 
 
 class ProjectViewSet(viewsets.ModelViewSet):

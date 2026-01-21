@@ -89,17 +89,6 @@
 },
 {
   "model": "projects.project",
-  "pk": 1,
-  "fields": {
-    "title": "Projet A",
-    "description": "Premier projet",
-    "type": "backend",
-    "created_time": "2026-01-19T15:48:43.357Z",
-    "author": 8
-  }
-},
-{
-  "model": "projects.project",
   "pk": 2,
   "fields": {
     "title": "Projet B",
@@ -140,15 +129,6 @@
     "type": "frontend",
     "created_time": "2026-01-20T15:00:36.854Z",
     "author": 6
-  }
-},
-{
-  "model": "projects.contributor",
-  "pk": 1,
-  "fields": {
-    "user": 8,
-    "project": 1,
-    "role": "AUTHOR"
   }
 },
 {
@@ -212,13 +192,28 @@
   }
 },
 {
-  "model": "projects.comment",
-  "pk": "8401eee0-239d-42f6-83c4-979ecb7eef2a",
+  "model": "projects.issue",
+  "pk": 2,
   "fields": {
-    "description": "J'ai vérifié les logs, il semble que ce soit un problème de timeout avec la base de données.",
+    "title": "Problème d'affichage mobile",
+    "description": "Le menu burger ne s'ouvre pas sur iOS.",
+    "priority": "MEDIUM",
+    "tag": "BUG",
+    "status": "To Do",
+    "project": 5,
+    "author": 7,
+    "assigned_user": 6,
+    "created_time": "2026-01-20T22:44:51.492Z"
+  }
+},
+{
+  "model": "projects.comment",
+  "pk": "230137a2-e855-4291-a2c5-bbf694ff1539",
+  "fields": {
+    "description": "Correction : modif du commentaire.",
     "author": 6,
     "issue": 1,
-    "created_time": "2026-01-20T22:37:10.610Z"
+    "created_time": "2026-01-20T22:58:33.442Z"
   }
 }
 ]
