@@ -33,8 +33,13 @@ class ProjectViewSet(viewsets.ModelViewSet):
         """
         if self.action in ['update', 'partial_update', 'destroy', 'add_contributor', 'remove_contributor']:
             permission_classes = [IsAuthenticated, IsProjectAuthor]
-        elif self.action in ['retrieve', 'list']:
+        elif self.action == 'retrieve':
+            # Strict check for detail view
             permission_classes = [IsAuthenticated, IsProjectContributor]
+        elif self.action == 'list':
+            # Allow authenticated users to list their projects
+            # Filtering is handled by get_queryset
+            permission_classes = [IsAuthenticated]
         else:
             permission_classes = [IsAuthenticated]
         return [permission() for permission in permission_classes]

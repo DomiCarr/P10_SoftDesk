@@ -1,7 +1,16 @@
 # apps/users/models.py
 
+# AbstractUser: A template model provided by Django containing
+# all standard user fields (username, password, email).
+# We import it to avoid recreating a user system from scratch.
 from django.contrib.auth.models import AbstractUser
+
+# models: A toolbox used to define database columns
+# (numbers, text, dates).
 from django.db import models
+
+# ValidationError: A specific tool to tell the program:
+# "Stop everything, there is an error in the entered data".
 from django.core.exceptions import ValidationError
 
 
@@ -50,8 +59,10 @@ class User(AbstractUser):
 
     def clean(self):
         """
-        Override clean() to automatically validate fields when using
-        full_clean(), including serializers or admin forms.
+        By writing super().clean(), you are basically saying: "First,
+        execute Django's standard validation code, then, once that is
+        done, proceed with my custom age verification."
+        It is a security measure to stack rules instead of replacing them.
         """
         super().clean()
         self.validate_age()
