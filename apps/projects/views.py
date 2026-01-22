@@ -83,7 +83,7 @@ class IssueViewSet(viewsets.ModelViewSet):
         return Issue.objects.filter(
             project_id=self.kwargs["project_pk"],
             project__contributors__user=self.request.user
-        ).distinct()
+        ).select_related('author', 'project').distinct()
 
     def get_permissions(self):
         if self.action in ["update", "partial_update", "destroy"]:
@@ -106,7 +106,7 @@ class CommentViewSet(viewsets.ModelViewSet):
         return Comment.objects.filter(
             issue_id=self.kwargs["issue_pk"],
             issue__project__contributors__user=self.request.user
-        ).distinct()
+        ).select_related('author').distinct()
 
     def get_permissions(self):
         if self.action in ["update", "partial_update", "destroy"]:
