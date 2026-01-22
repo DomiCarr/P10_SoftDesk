@@ -50,7 +50,9 @@ class User(AbstractUser):
     can_data_be_shared = models.BooleanField(default=False)
     created_time = models.DateTimeField(auto_now_add=True)
 
+    # Custom and overridden methods for SoftDesk
     def validate_age(self):
+        # CUSTOM: Specific business logic to check user age
         """
         Raise ValidationError if the user's age is less than 15.
         """
@@ -58,6 +60,7 @@ class User(AbstractUser):
             raise ValidationError("User must be at least 15 years old")
 
     def clean(self):
+        # OVERRIDDEN: Extends Django's standard validation process
         """
         By writing super().clean(), you are basically saying: "First,
         execute Django's standard validation code, then, once that is
@@ -68,9 +71,10 @@ class User(AbstractUser):
         self.validate_age()
 
     def save(self, *args, **kwargs):
+        # OVERRIDDEN: Extends Django's standard save process
         """
-        Override save() to ensure full_clean() is called before saving,
-        enforcing model-level validation automatically.
+        Force model validation before saving to database.
+        This ensures all custom rules (like age) are always enforced.
         """
         self.full_clean()  # triggers clean() -> validate_age()
         super().save(*args, **kwargs)
