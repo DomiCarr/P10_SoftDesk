@@ -13,7 +13,7 @@
 - [Installation Guide](#-installation-guide)
 - [Launch the Application](#-launch-the-application)
 - [Built With](#-built-with)
-- [Compliance & Ethics](#Cpmpliance-&-Ethics)
+- [Compliance & Ethics](#️-compliance--ethics)
 - [Author](#-author)
 - [License](#-license)
 
