@@ -9,14 +9,15 @@ class IsProjectContributor(BasePermission):
     """
 
     def has_permission(self, request, view):
-        # On récupère l'ID du projet dans l'URL pour vérifier l'accès
+        # Retrieve the project ID from the URL to check access
         project_id = view.kwargs.get("project_pk")
         if not project_id:
             return False
         return Contributor.objects.filter(project_id=project_id, user=request.user).exists()
 
     def has_object_permission(self, request, view, obj):
-        # Pour les détails d'un projet spécifique
+        # # Ensure the user belongs to the contributors list
+        # of the specific project instance being accessed
         return obj.contributors.filter(user=request.user).exists()
 
 
