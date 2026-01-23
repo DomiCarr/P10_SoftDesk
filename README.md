@@ -12,7 +12,6 @@
 - [Application Architecture](#-application-architecture)
 - [Installation Guide](#-installation-guide)
 - [Launch the Application](#-launch-the-application)
-- [API Documentation (Postman)](#-api-documentation-postman)
 - [Built With](#-built-with)
 - [Author](#-author)
 - [License](#-license)
@@ -90,7 +89,7 @@ Clone the repository from GitHub:
 ```bash
 git clone https://github.com/DomiCarr/OCR_P10_SoftDesk
 cd OCR_P10_SoftDesk
-
+```
 
 
 ### 🛠️ Set up the virtual environment
@@ -104,11 +103,13 @@ When you run the installation command, Pipenv reads the `Pipfile` and `Pipfile.l
 
 ```bash
 pipenv install
+```
 
 **Activate:**
 
 ```bash
 pipenv shell
+```
 
 ### ✅ Verify installation
 
@@ -116,6 +117,7 @@ Run the following to confirm packages are installed:
 
 ```bash
 pip freeze
+```
 
 Expected output includes:
 
@@ -132,7 +134,7 @@ sqlparse==0.5.5
 
 ---
 
-### 🏃 Prepare the database and run the Django Development Server
+### 🏃 Prepare the database
 
 From the project root:
 
@@ -151,9 +153,9 @@ python manage.py runserver
 
 ```
 
-## 🏁 Access the Application
+## 🏃 Launch the Application
 
-The API will be available at: [http://127.0.0.1:8000/](http://127.0.0.1:8000/)
+The API will be available at: http://127.0.0.1:8000/
 
 ---
 
